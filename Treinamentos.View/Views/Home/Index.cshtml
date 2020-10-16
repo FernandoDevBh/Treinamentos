@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="align-content-xl-center">
+    <form action="home/IncluirPaciente" method="POST" class="form-group">
+        <button class="btn btn-primary">Incluir Paciente</button>
+    </form>
+    <form action="home/EditarPaciente" method="POST" class="form-group">
+        <button class="btn btn-secondary">Editar Paciente</button>
+    </form>
+    <form action="home/ExcluiPaciente" method="POST" class="form-group">
+        <button class="btn btn-danger">Excluir Paciente</button>
+    </form>
+
+    <button type="button" id="btnGetPacientes" class="btn btn-success">Buscar Pacientes</button>
+
+    <div id="pacientes-container"></div>
+</div>

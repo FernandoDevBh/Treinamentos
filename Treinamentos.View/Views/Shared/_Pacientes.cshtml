@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Treinamento.Domain.Paciente>
+
+@if(Model.Any())
+{
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Nome da Mãe</th>
+                <th>Data Nascimento</th>
+                <th>Fase</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var paciente in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => paciente.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => paciente.Sobrenome)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => paciente.NomeMae)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => paciente.DataNascimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => paciente.Fase)
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
